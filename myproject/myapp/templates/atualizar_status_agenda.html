@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Status Agenda</title>
+</head>
+<body>
+    <h1>Atualizar Status Agenda</h1>
+    <form action="{% url 'update_status' agenda.pk %}" method="post">
+        {% csrf_token %}
+        <label for="id_status">Status:</label>
+        <select id="id_status" name="status" required>
+            <option value="ativo">Ativo</option>
+            <option value="inativo">Inativo</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
