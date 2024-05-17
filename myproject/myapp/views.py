@@ -57,6 +57,11 @@ def dados_sair(request):
     #dados = Agendas.objects.all()
     return render(request, 'login_usuario.html')
 
+def sobre(request):
+    # Recupere os dados da tabela
+    #dados = Agendas.objects.all()
+    return render(request, 'sobre.html')
+
 # tela de registro
 
 from django.shortcuts import render, redirect

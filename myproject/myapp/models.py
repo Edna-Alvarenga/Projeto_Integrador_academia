@@ -24,7 +24,7 @@ class Agendas(models.Model):
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='ativo', null=True)
 
     def __str__(self):
-        return f"{self.professor} - {self.local} - {self.data} - {self.hora} - {self.status}"
+        return f"{self.professor} - {self.local} - {self.data} - {self.hora} -  {self.status}"
 
 class CustomUser(AbstractUser):
     USER_TYPES = (
